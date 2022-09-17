@@ -1,24 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Inicio from "./views/InicioView.js";
+import Apta from "./views/AptaView.js";
+import Historia from "./views/HistoriaView.js";
+import Tecnicas from "./views/TecnicasView.js";
+import Testimonios from "./views/TestimoniosView.js";
+import ErrorView from "./views/ErrorView.js";
+import Navegacion from "./components/Navegacion.js";
+import Footer from "./components/Footer.js";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Navegacion></Navegacion>
+      <Routes>
+        <Route path="/" element={<Inicio />}></Route>
+        <Route path="/eresapta" element={<Apta />}></Route>
+        <Route path="/historia" element={<Historia />}></Route>
+        <Route path="/tecnicas" element={<Tecnicas />}></Route>
+        <Route path="/testimonios" element={<Testimonios />}></Route>
+        <Route path="*" element={<ErrorView />}></Route>
+      </Routes>
+      <Footer></Footer>
+    </Router>
   );
 }
 
