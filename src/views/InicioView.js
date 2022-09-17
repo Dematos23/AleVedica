@@ -8,7 +8,7 @@ export default function Inicio() {
         <Carousel.Item>
           <img
             className="d-block w-100"
-            src="https://image.jimcdn.com/app/cms/image/transf/none/path/s5ef5736a5c740da6/image/i2ee9c880006ca2f2/version/1648799288/image.jpg"
+            src="https://i.imgur.com/NLj2Asb.jpeg"
             alt="First slide"
           />
           <Carousel.Caption>
